@@ -11,4 +11,4 @@ Compatible with Quasar UI v2 and Vue 3.
 If you appreciate the work that went into this project, please consider [donating to Quasar](https://donate.quasar.dev).
 
 # License
-MIT (c) ccimage <zhangchuan.cn@gmail.com>
+MIT (c) ccimage
