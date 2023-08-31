@@ -31,12 +31,12 @@ module.exports = function (ctx) {
 
     framework: {
       // iconSet: 'material-icons', // Quasar icon set
-      // lang: 'en-US', // Quasar language pack
+      // lang: 'en', // Quasar language pack
 
       config: {},
 
       // Quasar plugins
-      plugins: []
+      plugins: ['LocalStorage']
     },
 
     // animations: 'all', // --- includes all animations

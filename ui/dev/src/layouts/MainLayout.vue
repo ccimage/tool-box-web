@@ -11,10 +11,10 @@
         />
 
         <q-toolbar-title>
-          quasar-ui-toolbox-web v{{ version }}
+          {{ $t('mainContext.title') }}
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>v{{ version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -28,7 +28,7 @@
 import { version } from 'ui' // "ui" is aliased in quasar.conf.js
 
 export default {
-  name: 'MyLayout',
+  name: 'MainLayout',
 
   setup () {
     return {
