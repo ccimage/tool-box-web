@@ -1,13 +1,7 @@
-import { h } from 'vue'
-import { QBadge } from 'quasar'
+import Hash from './Hash'
+import Password from './Password'
+import TimeConvert from './TimeConvert'
+import TransCode from './TransCode'
 
-export default {
-  name: 'ToolBoxWeb',
-
-  setup () {
-    return () => h(QBadge, {
-      class: 'ToolBoxWeb',
-      label: 'ToolBoxWeb'
-    })
-  }
-}
+const Components = [Hash, Password, TimeConvert, TransCode];
+export default Components;

@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
 
-    <ToolBoxWeb />
+    <TransCode />
 
 
   </q-page>

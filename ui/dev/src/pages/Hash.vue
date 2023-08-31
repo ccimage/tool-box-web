@@ -1,9 +1,9 @@
 <template>
   <q-page padding>
-    
-    <ToolBoxWeb />
-    
-    
+
+    <Hash />
+
+
   </q-page>
 </template>
 

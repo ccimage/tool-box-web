@@ -7,7 +7,7 @@ const messages = {
     functionMenu: {
       Hash: 'Hash create',
       Password: 'Password generate',
-      DateTime: 'Date convert',
+      TimeConvert: 'Date convert',
       TransCode: 'Text transcode'
     }
   }
