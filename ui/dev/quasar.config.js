@@ -47,9 +47,17 @@ module.exports = function (ctx) {
       vueRouterMode: 'history',
 
       chainWebpack (chain) {
+        chain.resolve.fallback = {
+          crypto: require.resolve('crypto-browserify'),
+          stream: require.resolve('stream-browserify'),
+        }
+        chain.resolve.alias.set('crypto', 'crypto-browserify')
+        chain.resolve.alias.set('stream', 'stream-browserify')
+
         chain.resolve.alias.merge({
           ui: path.resolve(__dirname, `../src/index.esm.js`)
         })
+
 
         chain.plugin('define-ui')
           .use(webpack.DefinePlugin, [{
