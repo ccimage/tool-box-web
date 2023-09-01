@@ -1,4 +1,60 @@
 <template>
-    <div>this is time convert</div>
+    <div class="q-pa-md">
+      <div class="row">
+        <div class="col-auto">
+            <q-chip clickable @click="timeStampClick" icon="alarm" color="white">
+                {{ timeStamp }}
+            </q-chip>
+        </div>
+        <div class="col-auto">
+            <span> &lt;- -&gt; </span>
+        </div>
+        <div class="col-auto">
+            <q-chip clickable @click="localeStringClick" icon="alarm" color="white">
+                {{ localeString }}
+            </q-chip>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-auto">
+            <q-input
+            standout 
+            v-model="inputTimeStamp"
+            :label="$t('TimeConvert.timeStamp')"
+            /> 
+        </div>
+        <div class="col-auto">
+            <q-btn color="primary" :label="$t('TimeConvert.convert')" @click="convertToLocale()">
+            </q-btn>
+        </div>
+        <div class="col-auto">
+            <q-input
+            standout 
+            v-model="resultLocaleTime"
+            :label="$t('TimeConvert.localeTime')"
+            /> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-auto">
+            <q-input
+            standout 
+            v-model="inputLocaleTime"
+            :label="$t('TimeConvert.localeTime')"
+            /> 
+        </div>
+        <div class="col-auto">
+            <q-btn color="primary" :label="$t('TimeConvert.convert')" @click="convertToStamp()">
+            </q-btn>
+        </div>
+        <div class="col-auto">
+            <q-input
+            standout 
+            v-model="resultTimeStamp"
+            :label="$t('TimeConvert.timeStamp')"
+            /> 
+        </div>
+      </div>
+    </div>
 </template>
 <script src="./TimeConvert"></script>

@@ -36,7 +36,7 @@ module.exports = function (ctx) {
       config: {},
 
       // Quasar plugins
-      plugins: ['LocalStorage']
+      plugins: ['LocalStorage', 'Notify']
     },
 
     // animations: 'all', // --- includes all animations
