@@ -9,7 +9,7 @@
         />
       </div>
       <div class="row">
-        <div class="col-auto">
+        <div class="col col-sm-2 col-md-2 col-lg-2">
             <q-select standout v-model="selectMethod" :options="methodList" label="Standout" />
         </div>
         <div class="col-auto">
