@@ -11,7 +11,7 @@
       </div>
       <div class="row">
         <div class="col col-sm-2 col-md-2 col-lg-2">
-            <q-select standout v-model="selectMethod" :options="methodList" label="Standout" />
+            <q-select v-model="selectMethod" :options="methodList" label="" />
         </div>
         <div class="col-auto">
             <q-btn color="primary" icon="expand_more" :label="$t('TransCode.encode')" @click="encodeText()">

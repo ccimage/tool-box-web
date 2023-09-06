@@ -45,7 +45,7 @@ export default {
       const units = ref('')
       const checkQuality = () => {
         const checkRet = zxcvbn(password.value)
-        console.log(checkRet)
+        // console.log(checkRet)
         resultColor.value = colors[checkRet.score]
         quality.value = qualityList[checkRet.score]
         count.value = checkRet.guesses

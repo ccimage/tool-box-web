@@ -2,7 +2,8 @@ const messages = {
   "zh-CN": {
     mainContext: {
       title: "工具盒子",
-      mainMenu: "请选择一项: "
+      mainMenu: "请选择一项: ",
+      language: "选择语言"
     },
     functionMenu: {
       Hash: "哈希散列",
@@ -42,7 +43,7 @@ const messages = {
       high: "高",
       veryHigh: "非常高",
       normal: "一般",
-      include: "包含字符",
+      include: "使用字符",
       qualityDetail: "暴力破解大约需要尝试次数：{count}, 时间：{crackTime}{units}",
       crackCenturies: "几个世纪",
       crackDecades: "几十年",
