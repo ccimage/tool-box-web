@@ -23,5 +23,6 @@ export default require.context('../pages', true, /^\.\/.*\.vue$/)
   .map(page => ({
     file: page,
     title: page,
-    path: slugify(kebabCase(page))
+    // path: slugify(kebabCase(page))
+    path: `/${page}`
   }))

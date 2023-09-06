@@ -3,7 +3,8 @@ const messages = {
     mainContext: {
       title: "Tool Box",
       mainMenu: "Please select one: ",
-      language: "select language"
+      language: "select language",
+      home: "Home"
     },
     functionMenu: {
       Hash: "Hash create",

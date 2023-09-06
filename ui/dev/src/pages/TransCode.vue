@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-
+    <BreadCrumbs />
     <TransCode />
 
 

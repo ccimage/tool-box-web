@@ -3,7 +3,8 @@ const messages = {
     mainContext: {
       title: "工具盒子",
       mainMenu: "请选择一项: ",
-      language: "选择语言"
+      language: "选择语言",
+      home: "首页"
     },
     functionMenu: {
       Hash: "哈希散列",
