@@ -3,6 +3,7 @@
       <div class="row">
         {{ $t('Hash.plainText') }}:
         <q-input
+          class="full-row"
           v-model="textSource"
           filled
           autogrow
@@ -51,6 +52,7 @@
       </div>
       <div class="row">
         <q-input
+          class="full-row"
           v-model="textResult"
           :placeholder="$t('Hash.resultText')"
         /> 

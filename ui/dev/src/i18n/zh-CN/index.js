@@ -32,6 +32,26 @@ const messages = {
       encode: "编码",
       decode: "解码",
       emptyNotify: "{param}的内容不能为空"
+    },
+    Password: {
+      password: "密码",
+      length: "密码长度",
+      strength: "密码强度",
+      low: "低",
+      veryLow: "非常低",
+      high: "高",
+      veryHigh: "非常高",
+      normal: "一般",
+      include: "包含字符",
+      qualityDetail: "暴力破解大约需要尝试次数：{count}, 时间：{crackTime}{units}",
+      crackCenturies: "几个世纪",
+      crackDecades: "几十年",
+      crackYear: "年",
+      crackDay: "天",
+      crackHour: "小时",
+      crackMinute: "分钟",
+      crackSecond: "秒",
+      hint: "暴力破解速度假设为10000次/秒"
     }
   }
 }

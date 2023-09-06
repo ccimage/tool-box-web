@@ -3,6 +3,7 @@
       <div class="row">
         {{ $t('TransCode.sourceText') }}:
         <q-input
+          class="full-row"
           v-model="textSource"
           filled
           autogrow
@@ -24,6 +25,7 @@
       <div class="row">
         {{ $t('TransCode.resultText') }}:
         <q-input
+          class="full-row"
           v-model="textResult"
           filled
           autogrow
