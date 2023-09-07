@@ -15,7 +15,8 @@ export default {
         return {param}
     },
     created() {
-        const path = decodeURIComponent(window.location.pathname)
+        const path = window.location.hash
+        console.log("location =", window.location)
         this.param = path.substring(path.lastIndexOf("/") + 1)
         
     }

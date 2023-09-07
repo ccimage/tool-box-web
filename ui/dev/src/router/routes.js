@@ -7,6 +7,13 @@ const children = pages.map(page => ({
 
 const routes = [
   {
+    path: '/index.html',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Index.vue') }
+    ]
+  },
+  {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [

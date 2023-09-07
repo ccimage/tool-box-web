@@ -1,0 +1,55 @@
+{
+    "name": "toolbox",
+    "displayName": "Tool Box",
+    "description": "Combination dev tools",
+    "version": "1.0.0",
+    "publisher": "ccimage",
+    "icon": "projecticon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ccimage/tool-box-web"
+    },
+    "engines": {
+        "vscode": "^1.34.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.openToolBox"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.openToolBox",
+                "title": "Open tool box"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "lint": "eslint . --ext .ts,.tsx",
+        "test": "node ./out/test/runTest.js"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+        "@types/glob": "^7.2.0",
+        "@types/mocha": "^9.1.0",
+        "@types/node": "^20.5.9",
+        "@types/vscode": "^1.34.0",
+        "@typescript-eslint/parser": "^4.22.1",
+        "@vscode/test-electron": "^2.1.2",
+        "eslint": "^7.23.0",
+        "eslint-config-prettier": "^8.1.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-prettier": "^3.3.1",
+        "lint-staged": "^11.0.0",
+        "mocha": "^9.2.1",
+        "prettier": "^2.2.1",
+        "typescript": "^4.5.5"
+    }
+}
