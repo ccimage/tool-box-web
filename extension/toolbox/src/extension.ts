@@ -3,7 +3,6 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
 import * as path from "path";
-import * as fs from "fs";
 
 // Track currently webview panel
 let currentPanel: vscode.WebviewPanel | undefined = undefined;
@@ -13,7 +12,7 @@ let currentPanel: vscode.WebviewPanel | undefined = undefined;
 export function activate(context: vscode.ExtensionContext) {
     // Use the console to output diagnostic information (console.log) and errors (console.error)
     // This line of code will only be executed once when your extension is activated
-    //console.log('Congratulations, your extension "jsonviewer" is now active!');
+    //console.log('Congratulations, your extension is now active!');
 
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with  registerCommand
@@ -70,23 +69,11 @@ export function deactivate() {
 
 function readIndex(extPath: string, webview: vscode.Webview) {
     try {
-        const mediaPath = webview.asWebviewUri(vscode.Uri.file(path.join(extPath, "media", "index.html")));
+        const mediaPath = webview.asWebviewUri(vscode.Uri.file(path.join(extPath, "media/")));
         console.log("ext path = ", mediaPath.toString());
-        const htmlText = `<!DOCTYPE html><html><head> 
-      <title>Tool Box</title><meta charset=utf-8><meta name=description content="tool box - extension of vscode"><meta name=format-detection content="telephone=no"><meta name=msapplication-tap-highlight content=no><meta name=viewport content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width"></head><body>
-      <iframe
-        scrolling="no"
-        name="game-frame"
-        src="${mediaPath}"
-        frameborder="no"
-        title="Tool Box"
-        style="width:100%;height:900px;"
-      >
-      </iframe>
-      
-      </body></html>`;
+        const htmlText = `<!DOCTYPE html><html><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-eval' https:"><title>Tool Box</title><meta charset=utf-8><meta name=description content="Tools for developers"><meta name=format-detection content="telephone=no"><meta name=msapplication-tap-highlight content=no><meta name=viewport content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width"><script defer src=${mediaPath}js/vendor.16ad9862.js></script><script defer src=${mediaPath}js/app.9803e5c0.js></script><script defer src=${mediaPath}js/133.1440b00f.js></script><link href=${mediaPath}css/vendor.a397139c.css rel=stylesheet><link href=${mediaPath}css/app.827b4b16.css rel=stylesheet></head><body><div id=q-app></div></body></html>`;
         
-        return htmlText.replace(/\n/g, "")
+        return htmlText;
     } catch(ex: any) {
         return ex.toString();
     }

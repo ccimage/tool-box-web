@@ -2,7 +2,7 @@
     <div class="q-pa-md">
       <div class="row">
         <div class="col col-sm-5 col-md-3">
-            <q-chip clickable @click="timeStampClick" icon="alarm" color="white">
+            <q-chip clickable @click="timeStampClick" icon="alarm">
                 {{ timeStamp }}
             </q-chip>
         </div>
@@ -10,7 +10,7 @@
             <span> &lt;- -&gt; </span>
         </div>
         <div class="col col-sm-5 col-md-3">
-            <q-chip clickable @click="localeStringClick" icon="alarm" color="white">
+            <q-chip clickable @click="localeStringClick" icon="alarm">
                 {{ localeString }}
             </q-chip>
         </div>
