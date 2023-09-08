@@ -1,10 +1,16 @@
-<img src="https://img.shields.io/npm/v/quasar-ui-toolbox-web.svg?label=quasar-ui-toolbox-web">
+# Online use
+Open the link use the tools [https://ccimage.github.io](ccimage.github.io)
 
+# vscode extension
+[Tool box for developers](https://marketplace.visualstudio.com/items?itemName=ccimage.dev-toolbox)
+or
+search dev-toolbox in vscode extensions
 
 Compatible with Quasar UI v2 and Vue 3.
 
 # Structure
-* [/ui](ui) - standalone npm package
+* [/ui](ui) - a web app
+* [/extension](extension) - extension for vscode (compile from ui)
 
 
 # Donate

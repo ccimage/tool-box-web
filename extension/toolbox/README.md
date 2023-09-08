@@ -1,7 +1,8 @@
-Download as VSCode Extenstion: [Tool box](https://marketplace.visualstudio.com/items?itemName=ccimage.toolbox)
+Download as VSCode Extenstion: [Tool box for developers](https://marketplace.visualstudio.com/items?itemName=ccimage.dev-toolbox)
 
 Project home page [https://github.com/ccimage/tool-box-web](https://github.com/ccimage/tool-box-web)
 
+Visit it online [https://ccimage.github.io](ccimage.github.io)
 
 ## install
 - Open vscode and search extensions for 'toolbox'  
