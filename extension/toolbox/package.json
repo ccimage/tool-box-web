@@ -1,6 +1,6 @@
 {
-    "name": "toolbox",
-    "displayName": "Tool Box",
+    "name": "dev-toolbox",
+    "displayName": "Tool box for developers",
     "description": "Combination dev tools",
     "version": "1.0.0",
     "publisher": "ccimage",
