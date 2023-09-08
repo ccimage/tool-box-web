@@ -2,7 +2,7 @@
     "name": "dev-toolbox",
     "displayName": "Tool box for developers",
     "description": "Combination dev tools",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "ccimage",
     "icon": "projecticon.png",
     "repository": {
