@@ -40,6 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
                 {
                     enableScripts: true,
                     localResourceRoots: [vscode.Uri.file(path.join(context.extensionPath, "media"))],
+                    retainContextWhenHidden: true
                 } // Webview options. More on these later.
             );
             // And set its HTML content
@@ -71,7 +72,7 @@ function readIndex(extPath: string, webview: vscode.Webview) {
     try {
         const mediaPath = webview.asWebviewUri(vscode.Uri.file(path.join(extPath, "media/")));
         console.log("ext path = ", mediaPath.toString());
-        const htmlText = `<!DOCTYPE html><html><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-eval' https:"><title>Tool Box</title><meta charset=utf-8><meta name=description content="Tools for developers"><meta name=format-detection content="telephone=no"><meta name=msapplication-tap-highlight content=no><meta name=viewport content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width"><script defer src=${mediaPath}js/vendor.16ad9862.js></script><script defer src=${mediaPath}js/app.9803e5c0.js></script><script defer src=${mediaPath}js/133.1440b00f.js></script><link href=${mediaPath}css/vendor.a397139c.css rel=stylesheet><link href=${mediaPath}css/app.827b4b16.css rel=stylesheet></head><body><div id=q-app></div></body></html>`;
+        const htmlText = `<!DOCTYPE html><html><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-eval' https:"><title>Tool Box</title><meta charset=utf-8><meta name=description content="Tools for developers"><meta name=format-detection content="telephone=no"><meta name=msapplication-tap-highlight content=no><meta name=viewport content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width"><script defer src=${mediaPath}js/vendor.16ad9862.js></script><script defer src=${mediaPath}js/app.0e0b96bc.js></script><script defer src=${mediaPath}js/133.1440b00f.js></script><link href=${mediaPath}css/vendor.a397139c.css rel=stylesheet><link href=${mediaPath}css/app.827b4b16.css rel=stylesheet></head><body><div id=q-app></div></body></html>`;
         
         return htmlText;
     } catch(ex: any) {
