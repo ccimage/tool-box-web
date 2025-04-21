@@ -39,8 +39,9 @@ export default {
         },
         convertToLocale(){
           if (!inputTimeStamp.value) return showErrorNotify(trans(this,'emptyNotify', {param: trans(this,'timeStamp')}))
-          if (inputTimeStamp.value.length !== 10 && inputTimeStamp.value.length !== 13) return  showErrorNotify(trans(this,'stampLengthNotify'))
-          const stamp = inputTimeStamp.value.length === 10 ? Number(inputTimeStamp.value) * 1000 : Number(inputTimeStamp.value)
+          const timeStamp =  parseInt(Number(inputTimeStamp.value))
+          if (timeStamp.toString().length > 13) return  showErrorNotify(trans(this,'stampLengthNotify'))
+          const stamp = timeStamp.toString().length <= 10 ? timeStamp * 1000 : timeStamp
           resultLocaleTime.value = new Date(stamp).toLocaleString();
         },
         convertToStamp(){
